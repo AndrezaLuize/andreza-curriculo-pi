@@ -6,10 +6,25 @@ const Person = sequelize.define('Person', {
     type: DataTypes.STRING,
     allowNull: false
   },
-  idade: {
-    type: DataTypes.INTEGER,
+  email: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true
+  },
+  telefone: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  profissao: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  formacao: {
+    type: DataTypes.STRING,
     allowNull: false
   }
+}, {
+  
 });
 
 module.exports = Person;
